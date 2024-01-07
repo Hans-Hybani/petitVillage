@@ -1,0 +1,28 @@
+header{
+        padding-bottom: 20px;
+}
+.logo{
+        display: flex;
+        justify-content: center;
+}
+nav{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        background-color: #FDD90B ;
+}
+img{
+        width: 170px;
+}
+a{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        &:hover {
+                color: #151217;
+              }
+}
+.active {
+        color: #151217;
+}

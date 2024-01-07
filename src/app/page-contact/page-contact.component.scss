@@ -1,0 +1,30 @@
+h2{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+}
+form{
+        width: 700px;
+        text-align: center;
+}
+.Formulaire{
+        display: flex;
+        justify-content: center;
+}
+
+
+@media screen and (max-width: 968px) {
+        .Formulaire{
+                margin-left: 20px;
+                margin-right: 20px;
+        }
+}
+    
+@media screen and (max-width: 480px) {
+        .Formulaire{
+                margin-left: 20px;
+                margin-right: 20px;
+        }
+}
+
+

@@ -1,0 +1,36 @@
+footer{
+        margin-top: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: rgba(223, 223, 223, 0.525);
+}
+.icons{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+}
+
+.ico{
+        font-size: 40px;
+}
+
+.twitter{
+        color: #FDD90B ;
+}
+
+.instagram{
+        color: #151217;
+}
+
+.linkedin{
+        color: #DA001E;
+}
+
+.pied{
+        display: flex;
+        justify-content: center;
+}
+
+.pied img{
+        width: 400px;
+}

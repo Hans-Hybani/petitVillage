@@ -1,0 +1,62 @@
+h2{
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-weight: bold;
+}
+.text{
+        display: flex;
+        justify-content: center;
+}
+.text__position{
+        width: 700px;   
+}
+p{
+        text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+        .text__position{
+                padding-left: 20px;
+                padding-right: 20px;
+        }
+}
+
+.heros__div{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 200px;
+        padding-right: 200px;
+}
+
+.heros__div img{
+        width: 250px;
+}
+
+.heros__div p{
+        text-align: center;
+}
+
+@media screen and (max-width: 968px) {
+        .heros__div {
+            flex-wrap: wrap;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    
+        .heros__div img {
+            max-width: 250px;
+        }
+}
+    
+@media screen and (max-width: 480px) {
+        .heros__div {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    
+        .heros__div img {
+            max-width: 200px;
+        }
+}
+
