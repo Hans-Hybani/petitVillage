@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardService } from '../services/products.service';
 
 @Component({
   selector: 'app-page-apropos',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class PageAproposComponent {
 
+  images: { name: string, path: string }[] = [];
+
+  constructor(private cardService: CardService) {
+    this.images = this.cardService.images;
+  }
 }

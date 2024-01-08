@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SortByPricePipeModule } from '../sort-by-pricepipe/sort-by-price.pipe';
 import { FilterByNamePipeModule } from '../sort-by-pricepipe/filter-by-name.pipe';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -22,18 +23,20 @@ export class PageAccueilComponent implements OnInit {
   
   AllCard!:Carte[];
 
-  constructor(private cardService: CardService, private router: Router ) {}
+  constructor(private cardService: CardService, private router: Router,private route: ActivatedRoute ) {}
 
+  productId: string='';
   ngOnInit() {
     this.AllCard = this.cardService.AllCard;
+    this.productId = this.route.snapshot.params['id'];
   }
 
   redirectToProduit(card: Carte) {
     this.cardService.setSelectedCard(card);
-    this.router.navigate(['produit']);
+    this.router.navigate(['produit', card.id]);
   }
 
-  selectedSortOption: string = 'moincher';
+  selectedSortOption: string = 'ToutPrix';
   searchTerm: string = '';
   
   onSearch() {
