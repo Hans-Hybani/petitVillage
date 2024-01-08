@@ -5,34 +5,31 @@
         </div>
         <div class="selecteurs">
                 <div class="tri">
-                        <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Dropdown button
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Action</a></li>
-                                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                        </div>
+                        <label for="choixPrix">Choisissez un prix :</label>
+                        <select id="choixPrix" name="choixPrix" [(ngModel)]="selectedSortOption">
+                                <option value="moincher">Moins cher</option>
+                                <option value="plusCher">Plus cher</option>
+                                <option value="ToutPrix">Tout les prix</option>
+                        </select>
                 </div>
                 <div class="recherche">
-                        <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                        <form class="d-flex" role="search" (ngSubmit)="onSearch()">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" name="searchTerm">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                 </div>
+                      
         </div>
         <section>
                 <h2>Nos Produits</h2>
                 <div class="catalogue__cards">
-                        <div *ngFor="let card of AllCard" class="card" style="width: 18rem;">
+                        <div *ngFor="let card of AllCard | sortByPrice: selectedSortOption" class="card" style="width: 18rem;">
                                 <img [src]="card.imageUrl" class="card-img-top" alt="Astérix" id="image">
                                 <div class="card-body">
-                                  <h3 class="card-title">{{ card.title }}</h3>
-                                  <p class="card-text">{{ card.prix }} $</p>
-                                  <p class="card-text">{{ card.description }}</p>
-                                  <button (click)="redirectToProduit(card)" class="btn btn-primary">{{ card.button }}</button>
+                                        <h3 class="card-title">{{ card.title }}</h3>
+                                        <p class="card-text">{{ card.prix }} $</p>
+                                        <p class="card-text">{{ card.description }}</p>
+                                        <button (click)="redirectToProduit(card)" class="btn btn-primary">{{ card.button }}</button>
                                 </div>
                         </div>
                 </div>
