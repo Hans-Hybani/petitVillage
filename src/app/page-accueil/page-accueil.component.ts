@@ -15,14 +15,14 @@ export class PageAccueilComponent implements OnInit {
 
   AllCard!:Carte[];
 
-  constructor( private cardservice: CardService, private router: Router){}
+  constructor(private cardService: CardService, private router: Router) {}
 
   ngOnInit() {
-    this.AllCard = this.cardservice.AllCard;
+    this.AllCard = this.cardService.AllCard;
   }
 
-  redirectToProduit() {
+  redirectToProduit(card: Carte) {
+    this.cardService.setSelectedCard(card);
     this.router.navigate(['produit']);
   }
-
 }

@@ -27,12 +27,12 @@
                 <h2>Nos Produits</h2>
                 <div class="catalogue__cards">
                         <div *ngFor="let card of AllCard" class="card" style="width: 18rem;">
-                                <img [src]="card.imageUrl" class="card-img-top" alt="Astérix">
+                                <img [src]="card.imageUrl" class="card-img-top" alt="Astérix" id="image">
                                 <div class="card-body">
                                   <h3 class="card-title">{{ card.title }}</h3>
                                   <p class="card-text">{{ card.prix }} $</p>
                                   <p class="card-text">{{ card.description }}</p>
-                                  <button (click)="redirectToProduit()" class="btn btn-primary">{{ card.button }}</button>
+                                  <button (click)="redirectToProduit(card)" class="btn btn-primary">{{ card.button }}</button>
                                 </div>
                         </div>
                 </div>

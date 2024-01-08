@@ -72,6 +72,14 @@ export class CardService {
                         button: "Voir Plus"
                 }
         ];
+        selectedCard: Carte | undefined;
 
+        getSelectedCard(): Carte | undefined {
+                return this.selectedCard;
+        }
+
+        setSelectedCard(card: Carte): void {
+                this.selectedCard = card;
+        }
 }
 
