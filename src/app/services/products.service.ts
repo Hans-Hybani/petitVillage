@@ -72,6 +72,14 @@ export class CardService {
                         button: "Voir Plus"
                 }
         ];
+
+        images: { name: string, path: string }[] = [
+                { name: 'Asterix', path: '../../assets/asterix.jpg' },
+                { name: 'Obelix', path: '../../assets/obelix.jpg' },
+                { name: 'Idefix', path: '../../assets/idefix-2.jpg' },
+                { name: 'Zizanie', path: '../../assets/zizanie.jpg' },
+        ];
+
         selectedCard: Carte | undefined;
 
         getSelectedCard(): Carte | undefined {

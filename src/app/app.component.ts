@@ -8,7 +8,6 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { PageContactComponent } from './page-contact/page-contact.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 import { PageAproposComponent } from './page-apropos/page-apropos.component';
 import { PageDetailProduitComponent } from './page-detail-produit/page-detail-produit.component';
@@ -22,7 +21,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RouterLink,
     HeaderComponent,
     FooterComponent,
-    PageContactComponent,
     PageAccueilComponent,
     PageAproposComponent,
     PageDetailProduitComponent,
